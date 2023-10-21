@@ -3,7 +3,31 @@ main{
   flex-grow: 1;
   flex-direction: column;
 }
-body{
-  background: rgb(3,3,3);
-background: radial-gradient(circle, rgba(3,3,3,1) 0%, rgba(255,255,255,1) 35%, rgba(83,174,230,1) 100%);
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  background: linear-gradient(45deg, white, rgb(16, 36, 225), white, black);
+  background-size: 200% 200%; 
+  position: relative;
+  animation: cambiar 10s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes cambiar {
+  0% {
+    background-position: 0% 0%;
+    background-size: 0% 0%; 
+  }
+
+  50% {
+    background-position: 100% 100%;
+    background-size: 200% 200%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+    background-size: 0% 0%; 
+  }
 }

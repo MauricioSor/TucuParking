@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
-const Login = () => {
+const Login = ({usuarioLoguado,setUsuarioLogueado}) => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
     const navegar = useNavigate();
 
@@ -16,11 +16,15 @@ const Login = () => {
         }
         if(usuarioSesionStorage==="Playero"){
             Swal.fire("Bienvenido/a Playero","","success");
+            sessionStorage.setItem('sesion', JSON.stringify("SesionIniciada"));
+            setUsuarioLogueado(true);
             reset();
             navegar("/Playero");
         }
         if(usuarioSesionStorage==="Administrador"){
             Swal.fire("Bienvenido/a Administrador","","success");
+            sessionStorage.setItem('sesion', JSON.stringify("SesionIniciada"));
+            setUsuarioLogueado(true);
             reset();
             navegar("/Administrador");
         }

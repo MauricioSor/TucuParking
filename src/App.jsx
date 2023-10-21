@@ -9,15 +9,15 @@ import RutasProtegidas from './routes/RutasProtegidas'
 import RutasAdministrador from './routes/RutasAdministrador'
 
 function App() {
-  const usuarioSesionStorage = JSON.parse(sessionStorage.getItem('usuario')) || '';
+  const usuarioSesionStorage = JSON.parse(sessionStorage.getItem('sesion')) || '';
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSesionStorage);
   return (
     <>
       <BrowserRouter>
-      <Menu/>
+      <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>
       <Routes>
         <Route exact path='/' element={<Principal/>}/>
-        <Route exact path='/login' element={<Login/>} />
+        <Route exact path='/login' element={<Login usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>} />
         <Route path="/administrador/*" element={<RutasProtegidas><RutasAdministrador></RutasAdministrador></RutasProtegidas>}></Route>
       </Routes>
       <Footer/>

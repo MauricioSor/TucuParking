@@ -5,3 +5,20 @@
 #botonAzul{
     background-color: rgb(11, 48, 255);
 }
+#botonRojo{
+    background-color: rgb(255, 0, 0);
+}
+
+@keyframes cambiar {
+    0% {
+        background-position: 0 50%;
+    }
+  
+    50% {
+        background-position: 100% 50%;
+    }
+  
+    100% {
+        background-position: 0 50%;
+    }
+  }
