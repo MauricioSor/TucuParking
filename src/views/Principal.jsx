@@ -1,10 +1,11 @@
 import React from 'react';
-
+import { Container } from 'react-bootstrap';
+import "./Principal.css"
 const Principal = () => {
     return (
-        <div>
-            
-        </div>
+        <Container>
+        <p className='display-1 text-center'>¡Bienvenido a </p><p className='letrasPrincipal display-1 text-center'>Tucuparking!</p>
+        </Container>
     );
 };
 

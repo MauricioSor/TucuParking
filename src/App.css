@@ -1,5 +1,9 @@
-#root {
+main{
   min-width: 100vh;
-  margin: 0 auto;
-  
+  flex-grow: 1;
+  flex-direction: column;
+}
+body{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(83,174,230,1) 100%);
 }
