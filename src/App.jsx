@@ -7,6 +7,7 @@ import Principal from './views/Principal'
 import Login from './views/Login'
 import RutasProtegidas from './routes/RutasProtegidas'
 import RutasAdministrador from './routes/RutasAdministrador'
+import Playero from './views/Playero'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
   const PlayeroSesionStorage = JSON.parse(sessionStorage.getItem('SesionIniciadaPlayero')) || '';
   const [administradorLogueado, setAdministrador] = useState(AdminSesionStorage);
   const [playeroLogueado,setPlayeroLogueado]=useState(PlayeroSesionStorage);
+  
   return (
     <>
       <BrowserRouter>
@@ -21,7 +23,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Principal/>}/>
         <Route exact path='/login' element={<Login administradorLogueado={administradorLogueado}PlayeroSesionStorage={PlayeroSesionStorage}AdminSesionStorage={AdminSesionStorage} setAdministrador={setAdministrador} playeroLogueado={playeroLogueado} setPlayeroLogueado={setPlayeroLogueado}/>} />
-        <Route path="/administrador/*" element={<RutasProtegidas><RutasAdministrador></RutasAdministrador></RutasProtegidas>}></Route>
+        <Route exact path="/administrador/*" element={<RutasProtegidas><RutasAdministrador></RutasAdministrador></RutasProtegidas>}></Route>
+        <Route exact path="/Playero/*" element={<Playero></Playero>} />
       </Routes>
       <Footer/>
       </BrowserRouter>

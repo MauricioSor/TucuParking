@@ -40,7 +40,7 @@ const Menu = ({ playeroLogueado, setAdministrador, administradorLogueado, setPla
                                     <>
                                         {playeroLogueado ?
                                             (<>
-                                                <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar' to='/administrador'>
+                                                <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar' to='/Playero'>
                                                     Playero
                                                 </NavLink>
                                                 <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3' id='botonRojo' >Cerrar Sesion</Button>
