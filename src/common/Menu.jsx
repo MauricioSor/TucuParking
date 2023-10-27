@@ -4,10 +4,19 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import logo from "../assets/logo.png"
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 
-const Menu = ({usuarioLogueado, setUsuarioLogueado}) => {
+const Menu = ({ playeroLogueado, setAdministrador, administradorLogueado, setPlayeroLogueado, AdminSesionStorage, PlayeroSesionStorage }) => {
+    const navegar=useNavigate();
     const cerrarSesion = () => {
-        localStorage.removeItem("Sesion");
-        setUsuarioLogueado(false);
+        console.log(AdminSesionStorage);
+        console.log(PlayeroSesionStorage);
+
+        if (AdminSesionStorage !== "") {
+            setAdministrador(false);
+        }
+        if (PlayeroSesionStorage !== "") {
+            setPlayeroLogueado(false);
+        }
+        navegar("/")
     }
     return (
         <div>
@@ -17,20 +26,34 @@ const Menu = ({usuarioLogueado, setUsuarioLogueado}) => {
                     <Navbar.Collapse>
                         <Nav className="ms-auto">
                             <NavLink to="/" className='mx-1 nav-item nav-link btn border'>Inicio</NavLink>
-                            {usuarioLogueado ?
+                            {administradorLogueado ?
                                 (<>
                                     <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar' to='/administrador'>
                                         Administrador
                                     </NavLink>
-                                    <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3'id='botonRojo' >Cerrar Sesion</Button>
+                                    <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3' id='botonRojo' >Cerrar Sesion</Button>
                                 </>
                                 ) :
                                 (
                                     <>
-                                        <NavLink to="/login" className='mx-1 nav-item nav-link btn border'id='botonAzul' onClick={cerrarSesion}>Iniciar Sesion</NavLink>
+                                        {playeroLogueado ?
+                                            (<>
+                                                <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar' to='/administrador'>
+                                                    Playero
+                                                </NavLink>
+                                                <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3' id='botonRojo' >Cerrar Sesion</Button>
+                                            </>
+                                            ) :
+                                            (
+                                                <>
+                                                    <NavLink to="/login" className='mx-1 nav-item nav-link btn border' id='botonAzul' onClick={cerrarSesion}>Iniciar Sesion</NavLink>
+                                                </>
+                                            )
+                                        }
                                     </>
                                 )
                             }
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

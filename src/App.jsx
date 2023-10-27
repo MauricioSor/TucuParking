@@ -9,15 +9,18 @@ import RutasProtegidas from './routes/RutasProtegidas'
 import RutasAdministrador from './routes/RutasAdministrador'
 
 function App() {
-  const usuarioSesionStorage = JSON.parse(sessionStorage.getItem('sesion')) || '';
-  const [usuarioLogueado, setUsuarioLogueado] = useState(usuarioSesionStorage);
+  
+  const AdminSesionStorage = JSON.parse(sessionStorage.getItem("sesion")) || '';
+  const PlayeroSesionStorage = JSON.parse(sessionStorage.getItem('sesion')) || '';
+  const [administradorLogueado, setAdministrador] = useState(AdminSesionStorage);
+  const [playeroLogueado,setPlayeroLogueado]=useState(PlayeroSesionStorage);
   return (
     <>
       <BrowserRouter>
-      <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>
+      <Menu administradorLogueado={administradorLogueado}PlayeroSesionStorage={PlayeroSesionStorage}AdminSesionStorage={AdminSesionStorage} setAdministrador={setAdministrador} playeroLogueado={playeroLogueado} setPlayeroLogueado={setPlayeroLogueado}/>
       <Routes>
         <Route exact path='/' element={<Principal/>}/>
-        <Route exact path='/login' element={<Login usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>} />
+        <Route exact path='/login' element={<Login administradorLogueado={administradorLogueado}PlayeroSesionStorage={PlayeroSesionStorage}AdminSesionStorage={AdminSesionStorage} setAdministrador={setAdministrador} playeroLogueado={playeroLogueado} setPlayeroLogueado={setPlayeroLogueado}/>} />
         <Route path="/administrador/*" element={<RutasProtegidas><RutasAdministrador></RutasAdministrador></RutasProtegidas>}></Route>
       </Routes>
       <Footer/>

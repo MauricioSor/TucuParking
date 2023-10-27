@@ -5,26 +5,26 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
-const Login = ({usuarioLoguado,setUsuarioLogueado}) => {
+const Login = ({ playeroLoguado, setAdministrador, administradorLogueado, setPlayeroLogueado,AdminSesionStorage,PlayeroSesionStorage}) => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
     const navegar = useNavigate();
 
     const iniciarSesion =(usuario)=>{
-        const usuarioSesionStorage = JSON.parse(localStorage.getItem(usuario.usuario)) || null;
-        if(usuarioSesionStorage===null){
+        
+        if(usuario.usuario==null){
             Swal.fire("Credenciales incorrectas","Ingrese un usuario y/o constraseña válidos e intente nuevamente","error");
         }
-        if(usuarioSesionStorage==="Playero"){
+        if(usuario.usuario=="Playero"){
             Swal.fire("Bienvenido/a Playero","","success");
-            sessionStorage.setItem('sesion', JSON.stringify("SesionIniciada"));
-            setUsuarioLogueado(true);
+            sessionStorage.setItem('SesionIniciadaPlayero', JSON.stringify("SesionIniciadaPlayero"));
+            setPlayeroLogueado(true);
             reset();
             navegar("/Playero");
         }
-        if(usuarioSesionStorage==="Administrador"){
+        if(usuario.usuario=="Administrador"){
             Swal.fire("Bienvenido/a Administrador","","success");
-            sessionStorage.setItem('sesion', JSON.stringify("SesionIniciada"));
-            setUsuarioLogueado(true);
+            sessionStorage.setItem('SesionIniciadaAdmin', JSON.stringify("SesionIniciadaAdmin"));
+            setAdministrador(true);
             reset();
             navegar("/Administrador");
         }
