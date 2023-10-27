@@ -12,9 +12,11 @@ const Menu = ({ playeroLogueado, setAdministrador, administradorLogueado, setPla
 
         if (AdminSesionStorage !== "") {
             setAdministrador(false);
+            sessionStorage.removeItem("SesionIniciadaAdmin")
         }
         if (PlayeroSesionStorage !== "") {
             setPlayeroLogueado(false);
+            sessionStorage.removeItem("SesionIniciadaPlayero")
         }
         navegar("/")
     }

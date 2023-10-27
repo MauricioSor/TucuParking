@@ -10,8 +10,8 @@ import RutasAdministrador from './routes/RutasAdministrador'
 
 function App() {
   
-  const AdminSesionStorage = JSON.parse(sessionStorage.getItem("sesion")) || '';
-  const PlayeroSesionStorage = JSON.parse(sessionStorage.getItem('sesion')) || '';
+  const AdminSesionStorage = JSON.parse(sessionStorage.getItem("SesionIniciadaAdmin")) || '';
+  const PlayeroSesionStorage = JSON.parse(sessionStorage.getItem('SesionIniciadaPlayero')) || '';
   const [administradorLogueado, setAdministrador] = useState(AdminSesionStorage);
   const [playeroLogueado,setPlayeroLogueado]=useState(PlayeroSesionStorage);
   return (
