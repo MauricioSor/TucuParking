@@ -1,8 +1,19 @@
 import React from 'react';
-import { Container, Table, Form, Row, InputGroup } from 'react-bootstrap';
+import { Container, Table, Form, Row, InputGroup, Breadcrumb } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const AdminInforme = () => {
+    const navegar=useNavigate();
     return (
+        <>
+        <Container>
+                <Breadcrumb>
+                    <Breadcrumb.Item onClick={()=>{navegar("/")}}>Inicio</Breadcrumb.Item>
+                    <Breadcrumb.Item onClick={()=>{navegar("/Administrador")}}>Administrador</Breadcrumb.Item>
+                    <Breadcrumb.Item onClick={()=>{navegar("/Administrador/GenerarInformes")}}>Generar Informes</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Informe de Reservas</Breadcrumb.Item>
+                </Breadcrumb>
+            </Container>
         <Container className='d-flex flex-column'>
             <Container className='text-center'>
                 <Form>
@@ -72,6 +83,7 @@ const AdminInforme = () => {
                 </tbody>
             </Table>
         </Container>
+        </>
     );
 };
 

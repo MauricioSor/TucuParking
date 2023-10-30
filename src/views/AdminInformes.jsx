@@ -1,15 +1,16 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Breadcrumb, Container, Row } from 'react-bootstrap';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const AdminInformes = () => {
+    const navegar=useNavigate();
     return (
         <>
             <Container>
                 <Breadcrumb>
-                    <Breadcrumb.Item href="/">Inicio</Breadcrumb.Item>
-                    <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">Administrador</Breadcrumb.Item>
-                    <Breadcrumb.Item active>Data</Breadcrumb.Item>
+                    <Breadcrumb.Item onClick={()=>{navegar("/")}}>Inicio</Breadcrumb.Item>
+                    <Breadcrumb.Item onClick={()=>{navegar("/Administrador")}}>Administrador</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Generar Informes</Breadcrumb.Item>
                 </Breadcrumb>
             </Container>
             <Container className='d-flex justify-content-center align-items-center flex-column'>

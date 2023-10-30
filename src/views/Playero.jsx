@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, InputGroup, Modal, Row } from 'react-bootstrap';
+import { Breadcrumb, Button, Col, Container, Form, InputGroup, Modal, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 
@@ -10,6 +10,13 @@ const Playero = () => {
     const handleShow = () => setShow(true);
     return (
         <>
+        <Container>
+                <Breadcrumb>
+                    <Breadcrumb.Item href="/">Inicio</Breadcrumb.Item>
+                    <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">Administrador</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Data</Breadcrumb.Item>
+                </Breadcrumb>
+            </Container>
             <div>
                 <Container className='d-flex justify-content-center align-items-center flex-column'>
                     <Row>
