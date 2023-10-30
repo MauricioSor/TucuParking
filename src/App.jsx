@@ -7,8 +7,8 @@ import Principal from './views/Principal'
 import Login from './views/Login'
 import RutasProtegidasAdmin from './routes/RutasProtegidasAdmin'
 import RutasAdministrador from './routes/RutasAdministrador'
-import Playero from './views/Playero'
-import AdminInforme from './views/AdminInforme'
+import RutasProtegidasPlayero from './routes/RutasProtegidasPlayero'
+import RutasPlayero from './routes/RutasPlayero'
 
 function App() {
   
@@ -24,8 +24,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Principal/>}/>
         <Route exact path='/login' element={<Login administradorLogueado={administradorLogueado}PlayeroSesionStorage={PlayeroSesionStorage}AdminSesionStorage={AdminSesionStorage} setAdministrador={setAdministrador} playeroLogueado={playeroLogueado} setPlayeroLogueado={setPlayeroLogueado}/>} />
-        <Route exact path="/administrador/*" element={<RutasProtegidasAdmin><RutasAdministrador></RutasAdministrador></RutasProtegidasAdmin>}></Route>
-        <Route exact path="/Playero/*" element={<Playero></Playero>} />        
+        <Route exact path="/Administrador/*" element={<RutasProtegidasAdmin><RutasAdministrador></RutasAdministrador></RutasProtegidasAdmin>}></Route>
+        <Route exact path="/Playero/*" element={<RutasProtegidasPlayero><RutasPlayero></RutasPlayero></RutasProtegidasPlayero>} />        
       </Routes>
       <Footer/>
       </BrowserRouter>

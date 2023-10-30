@@ -1,10 +1,16 @@
 import React from 'react';
+import Playero from '../views/Playero';
+import PlayeroAgregarCliente from '../views/PlayeroAgregarCliente';
+import { Route, Routes } from 'react-router-dom';
 
 const RutasPlayero = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+        <Routes>
+        <Route exact path="/" element={<Playero></Playero>}></Route>
+		<Route exact path="/Informe" element={<PlayeroAgregarCliente></PlayeroAgregarCliente>}></Route>
+        </Routes>
+        </>
     );
 };
 

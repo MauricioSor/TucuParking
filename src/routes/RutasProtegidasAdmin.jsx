@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 
-const RutasProtegidas = ({children}) => {
+const RutasProtegidasAdmin = ({children}) => {
 	const AdminLogueado = JSON.parse(sessionStorage.getItem('SesionIniciadaAdmin')) || null
 	if (!AdminLogueado){
 		return <Navigate to='/login'></Navigate>
@@ -9,4 +9,4 @@ const RutasProtegidas = ({children}) => {
 	}
 };
 
-export default RutasProtegidas;
+export default RutasProtegidasAdmin;
