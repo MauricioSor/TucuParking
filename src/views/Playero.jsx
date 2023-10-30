@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { Breadcrumb, Button, Col, Container, Form, InputGroup, Modal, Row } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 const Playero = () => {
     const [show, setShow] = useState(false);
-
+    const navegar=useNavigate();
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
         <>
         <Container>
                 <Breadcrumb>
-                    <Breadcrumb.Item href="/">Inicio</Breadcrumb.Item>
-                    <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">Administrador</Breadcrumb.Item>
-                    <Breadcrumb.Item active>Data</Breadcrumb.Item>
+                    <Breadcrumb.Item onClick={()=>{navegar("/")}}>Inicio</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Playero Board</Breadcrumb.Item>
                 </Breadcrumb>
             </Container>
             <div>
