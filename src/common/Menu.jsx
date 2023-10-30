@@ -27,28 +27,28 @@ const Menu = ({ playeroLogueado, setAdministrador, administradorLogueado, setPla
                     <Navbar.Brand as={Link} to="/"><img className='logoImagen' src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Collapse>
                         <Nav className="ms-auto">
-                            <NavLink to="/" className='mx-1 nav-item nav-link btn border'>Inicio</NavLink>
+                            <NavLink to="/" className='mx-1 nav-item nav-link btn border align-self-center'>Inicio</NavLink>
                             {administradorLogueado ?
                                 (<>
-                                    <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar' to='/administrador'>
+                                    <NavLink className='mx-1 fw-semibold nav-item nav-link btn-navbar align-self-center' to='/administrador'>
                                         Administrador
                                     </NavLink>
-                                    <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3' id='botonRojo' >Cerrar Sesion</Button>
+                                    <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3 align-self-center' id='botonRojo' >Cerrar Sesion</Button>
                                 </>
                                 ) :
                                 (
                                     <>
                                         {playeroLogueado ?
                                             (<>
-                                                <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar' to='/Playero'>
+                                                <NavLink className='mx-2 fw-semibold nav-item nav-link btn-navbar align-self-center' to='/Playero'>
                                                     Playero
                                                 </NavLink>
-                                                <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3' id='botonRojo' >Cerrar Sesion</Button>
+                                                <Button onClick={cerrarSesion} variant='mx-2 fw-semibold nav-item nav-link border border-danger border-3 align-self-center' id='botonRojo' >Cerrar Sesion</Button>
                                             </>
                                             ) :
                                             (
                                                 <>
-                                                    <NavLink to="/login" className='mx-1 nav-item nav-link btn border' id='botonAzul' onClick={cerrarSesion}>Iniciar Sesion</NavLink>
+                                                    <NavLink to="/login" className='mx-1 nav-item nav-link btn border align-self-center' id='botonAzul' onClick={cerrarSesion}>Iniciar Sesion</NavLink>
                                                 </>
                                             )
                                         }
