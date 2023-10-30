@@ -28,7 +28,7 @@ const AdminInforme = () => {
                 </Form>
             </Container>
             <h5 className='display-5'>Informe del dia de hoy</h5>
-            <Table striped bordered hover>
+            <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                         <th>Playero</th>

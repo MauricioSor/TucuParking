@@ -22,7 +22,7 @@ const Footer = () => {
                     <Col className='text-start'>
                     <h6 className='display-6 text-center'>Donde estamos?</h6>
                     <Container className='text-center'>
-                    <iframe width="500" height="300"  id="gmap_canvas" src="https://maps.google.com/maps?width=630&amp;height=370&amp;hl=en&amp;q=24%20de%20septiembre%20556%20tucuman%20tucuman+(Tucuparking)&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <iframe className='100vh'  id="gmap_canvas" src="https://maps.google.com/maps?width=630&amp;height=370&amp;hl=en&amp;q=24%20de%20septiembre%20556%20tucuman%20tucuman+(Tucuparking)&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                     </Container>
                     </Col>
                 </Row>
