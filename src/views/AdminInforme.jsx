@@ -29,20 +29,45 @@ const AdminInforme = () => {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>Mark Otto</td>
+                        <td>Ford Ranger</td>
+                        <td>AC8293BD</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>Martin Dominguez</td>
+                        <td>Chevrolet Spin</td>
+                        <td>AB2938CX</td>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td colSpan={2}>Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td>Matias Richov</td>
+                        <td>Peugeot Kangoo</td>
+                        <td>AD3909DE</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lucas Hamilton</td>
+                        <td>Peugeot Kangoo</td>
+                        <td>AE4009DX</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nicolas Lopes</td>
+                        <td>Peugeot Kangoo</td>
+                        <td>AA3976DE</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Cristian Lewin</td>
+                        <td>Peugeot Kangoo</td>
+                        <td>AE31045LP</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Steve Jobs</td>
+                        <td>Ferrari Testa</td>
+                        <td>AE3910OP</td>
                     </tr>
                 </tbody>
             </Table>
