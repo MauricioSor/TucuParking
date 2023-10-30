@@ -8,7 +8,7 @@ const RutasPlayero = () => {
         <>
         <Routes>
         <Route exact path="/" element={<Playero></Playero>}></Route>
-		<Route exact path="/Informe" element={<PlayeroAgregarCliente></PlayeroAgregarCliente>}></Route>
+		<Route exact path="/AgregarCliente" element={<PlayeroAgregarCliente></PlayeroAgregarCliente>}></Route>
         </Routes>
         </>
     );

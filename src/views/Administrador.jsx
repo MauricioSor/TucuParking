@@ -12,7 +12,7 @@ const Administrador = () => {
         <Container className='d-flex justify-content-center align-items-center flex-column'>
         <Row>
         <NavLink  id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border' onClick={handleShow}>Agregar Playero</NavLink>
-        <NavLink to="/administrador/Informe" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Generar Informe</NavLink>
+        <NavLink to="/Administrador/Informe" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Generar Informe</NavLink>
         </Row>
         </Container>
         <Modal show={show} onHide={handleClose}>

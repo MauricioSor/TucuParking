@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, InputGroup, Modal, NavLink, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, InputGroup, Modal, Row } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 
 const Playero = () => {
@@ -12,10 +13,10 @@ const Playero = () => {
             <div>
                 <Container className='d-flex justify-content-center align-items-center flex-column'>
                     <Row>
-                        <NavLink to="/" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border' onClick={handleShow}>Registrar nuevo cliente</NavLink>
-                        <NavLink to="/" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Registrar nuevo vehiculo</NavLink>
-                        <NavLink to="/" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Administrar Vehiculos</NavLink>
-                        <NavLink to="/" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Vigilancia por camaras</NavLink>
+                        <NavLink to="/Playero/AgregarCliente" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border' >Registrar nuevo cliente</NavLink>
+                        <NavLink  id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'onClick={handleShow}>Registrar nuevo vehiculo</NavLink>
+                        <NavLink  id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Administrar Vehiculos</NavLink>
+                        <NavLink  id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Vigilancia por camaras</NavLink>
                     </Row>
                 </Container>
             </div>
@@ -27,7 +28,7 @@ const Playero = () => {
                         <Form>
                             <Row className="mb-3">
                                 <Form.Group as={Col} md="4" controlId="validationCustom01">
-                                    <Form.Label>Nombre</Form.Label>
+                                    <Form.Label>Tipo de Vehiculo</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
@@ -35,7 +36,7 @@ const Playero = () => {
                                     />
                                 </Form.Group>
                                 <Form.Group as={Col} md="4" controlId="validationCustom02">
-                                    <Form.Label>Apellido</Form.Label>
+                                    <Form.Label>Marca</Form.Label>
                                     <Form.Control
                                         required
                                         type="text"
@@ -43,7 +44,7 @@ const Playero = () => {
                                     />
                                 </Form.Group>
                                 <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-                                    <Form.Label>D.N.I</Form.Label>
+                                    <Form.Label>Patente</Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder="26456239"
