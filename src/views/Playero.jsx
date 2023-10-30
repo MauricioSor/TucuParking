@@ -22,7 +22,8 @@ const Playero = () => {
                         <NavLink to="/Playero/AgregarCliente" id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border' >Registrar nuevo cliente</NavLink>
                         <NavLink id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border' onClick={handleShow}>Registrar nuevo vehiculo</NavLink>
                         <NavLink id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Administrar Vehiculos</NavLink>
-                        <NavLink id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Vigilancia por camaras</NavLink>
+                        <NavLink to="/Playero/Gestion-de-estacionamiento"id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Gestion de Estacionamiento</NavLink>
+                        <NavLink to="/Playero/Camaras"id='botonAzul' className='py-5 px-5 text-white  fw-bold my-3 mx-1 nav-item nav-link btn border'>Vigilancia por camaras</NavLink>
                     </Container>
                 </Container>
             </div>
