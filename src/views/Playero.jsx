@@ -4,7 +4,7 @@ import { Button, Col, Container, Form, InputGroup, Modal, NavLink, Row } from 'r
 
 const Playero = () => {
     const [show, setShow] = useState(false);
-    
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
