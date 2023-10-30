@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Form, Row, InputGroup, Breadcrumb } from 'react-bootstrap';
+import { Container, Table, Form, Row, InputGroup, Breadcrumb, Pagination } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const AdminInforme = () => {
@@ -13,6 +13,19 @@ const AdminInforme = () => {
                     <Breadcrumb.Item onClick={() => { navegar("/Administrador/GenerarInformes") }}>Generar Informes</Breadcrumb.Item>
                     <Breadcrumb.Item active>Informe de Reservas</Breadcrumb.Item>
                 </Breadcrumb>
+            </Container>
+            <Container className='d-flex justify-content-center'>
+            <Pagination>
+                
+                <Pagination.Prev />
+                <Pagination.Item active>{1}</Pagination.Item>
+                <Pagination.Item>{2}</Pagination.Item>
+                <Pagination.Item>{3}</Pagination.Item>
+                <Pagination.Ellipsis />
+                <Pagination.Item>{10}</Pagination.Item>
+                <Pagination.Next />
+                
+            </Pagination>
             </Container>
             <Container className='d-flex flex-column'>
                 <Container className='text-center'>
