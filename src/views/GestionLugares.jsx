@@ -74,11 +74,11 @@ const GestionLugares = () => {
                     <Col className='col-4'>
                         <div className='d-flex flex-column'>
                             <button className=' py-4' onClick={handleOpen}style={{ backgroundColor: estadoLugar }}>Lugar01<br/> <b>{patente}</b></button>
-                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar02</button>
-                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar03</button>
-                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar04</button>
-                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar05</button>
-                            <button className='bg-success py-4' onClick={handleOpen}>Lugar06</button>
+                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar02 <br/> <b>AD0283DH</b></button>
+                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar03 <br/> <b>AE0283DE</b></button>
+                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar04 <br/> <b>AX0283AD</b></button>
+                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar05 <br/> <b>AB0283EA</b></button>
+                            <button className='bg-success py-4' onClick={handleOpen}>Lugar06 <br/> <b>FD0283XA</b></button>
                         </div>
                     </Col>
                     <Col className='col-4'>
@@ -86,12 +86,12 @@ const GestionLugares = () => {
                     </Col>
                     <Col className='col-4'>
                         <div className='d-flex flex-column'>
-                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar07</button>
-                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar08</button>
-                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar09</button>
-                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar10</button>
-                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar11</button>
-                            <button className='bg-success py-4' onClick={handleOpen}>Lugar12</button>
+                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar07 <br/> <b>AF0283GE</b></button>
+                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar08 <br/> <b>AA0283AD</b></button>
+                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar09 <br/> <b>AB0283DD</b></button>
+                            <button className='bg-warning py-4' onClick={handleOpen}>Lugar10 <br/> <b>AE0283BB</b></button>
+                            <button className='bg-danger py-4' onClick={handleOpen}>Lugar11 <br/> <b>AA0283BA</b></button>
+                            <button className='bg-success py-4' onClick={handleOpen}>Lugar12 <br/> <b>AB0283LA</b></button>
                         </div>
                     </Col>
                 </Row>
