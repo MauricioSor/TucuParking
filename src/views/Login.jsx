@@ -13,6 +13,8 @@ const Login = ({ playeroLoguado, setAdministrador, administradorLogueado, setPla
         
         if(usuario.usuario==null){
             Swal.fire("Credenciales incorrectas","Ingrese un usuario y/o constraseña válidos e intente nuevamente","error");
+        }else{
+            Swal.fire("Credenciales incorrectas","Ingrese un usuario y/o constraseña válidos e intente nuevamente","error");
         }
         if(usuario.usuario=="Playero"){
             Swal.fire("Bienvenido/a Playero","","success");
